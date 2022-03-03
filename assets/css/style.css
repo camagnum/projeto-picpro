@@ -1,0 +1,54 @@
+html {
+    width: 192  0px;
+}
+
+header{
+    background-color: #228664;
+    border-bottom: 1px solid rgba(255,255,255,0.4)
+}
+
+.secaoDetalhesConta {
+    background-color: #228664;
+    color: #fff;
+}
+
+.secaoDetalhesConta__sobreUsuario {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+}
+
+.usuarioInfo {
+    display: flex;
+    flex-direction: row;
+}
+
+.secaoDetalhesConta__saldo {
+    display: flex;
+}
+
+.secaoDetalhesConta__opcoesTransacoes {
+    display: flex;
+    justify-content: space-around;
+}
+
+.secaoDetalhesConta__itemTransacao {
+    background-color: #1F6F54;
+    width: 80px;
+    height: 80px;
+    color: #fff;
+}
+
+.container1 {
+    display: flex;
+    align-items: center;
+}
+
+.rodape__menuPrincipal {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rodape__menuItem a {
+    color: rgba(0,0,0,0.15)
+}

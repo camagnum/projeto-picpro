@@ -1,54 +1,393 @@
-html {
-    width: 192  0px;
-}
-
-header{
+body{
     background-color: #228664;
-    border-bottom: 1px solid rgba(255,255,255,0.4)
+    font-family: 'Poppins', sans-serif;
 }
 
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 150px;
+}
+
+/* Cabeçalho da Página */
+.cabecalho{
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.4);
+}
+
+.cabecalho__logoPicPro img{
+    width: 100%;
+    max-width: 140px;
+}
+
+.cabecalho .container {
+    display: flex;
+    align-items: center;
+}
+
+.cabecalho .cabecalho__logoPicPro {
+    border-right: 1px solid rgba(255,255,255,0.4);
+    margin-right: 15px;
+}
+
+/* Seção do Usuário */
 .secaoDetalhesConta {
-    background-color: #228664;
     color: #fff;
+    padding: 60px 0 30px;
 }
 
 .secaoDetalhesConta__sobreUsuario {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid rgba(0,0,0,0.15);
+    margin-bottom: 10px;
 }
 
-.usuarioInfo {
-    display: flex;
-    flex-direction: row;
+.secaoDetalhesConta__sobreUsuario img {
+    padding-left: 20px;
+    height: 100%;
+    max-width: 70px;
+}
+
+.secaoDetalhesConta__sobreUsuario p{
+    font-size: 18px;
+    margin-left: 10px;
+    line-height: 25px;
+}
+
+.secaoDetalhesConta__sobreUsuario p strong {
+    display: block;
+    font-weight: bold;
 }
 
 .secaoDetalhesConta__saldo {
+    border-top: 1px solid #000;
     display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.secaoDetalhesConta__saldo p {
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.secaoDetalhesConta__visualizar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.secaoDetalhesConta__visualizar img {
+    max-width: 100%;
+    width: 40px;
+    cursor: pointer;
+}
+
+.secaoDetalhesConta__saldo .secaoDetalhesConta__visualizar strong {
+    display: block;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.secaoDetalhesConta__saldo button{
+    background-color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 60px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.secaoDetalhesConta__saldo button:hover {
+    background-color: #d2d2d2;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.15) inset, 0 0 20px 4px rgba(0,0,0,0.15);
+}
+
+.secaoDetalhesConta__usuarioInfo,
+.secaoDetalhesConta__usuarioOpcoes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.secaoDetalhesConta__usuarioOpcoes img {
+    margin: 0 10px;
+    cursor: pointer;
 }
 
 .secaoDetalhesConta__opcoesTransacoes {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .secaoDetalhesConta__itemTransacao {
     background-color: #1F6F54;
-    width: 80px;
-    height: 80px;
-    color: #fff;
+    width: 170px;
+    height: 177px;
+    border-radius: 20%;
+    padding: 40px 20px;
+    cursor: pointer;
 }
 
-.container1 {
+.secaoDetalhesConta__itemTransacao:hover {
+    background-color: #fff;
+    color: #228664;
+}
+
+.secaoDetalhesConta__itemTransacao figure {
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    height: 50px;
+    width: 50px;
+}
+
+.secaoDetalhesConta__itemTransacao img {
+    width: 100%;
+    max-width: 40px;
+}
+
+.secaoDetalhesConta__itemTransacao p {
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 10px;
+    line-height: 25px;
+    width: 80px;
+}
+
+.secaoDetalhesConta__itemTransacao--qrCode figure {
+    background-image: url("../img/qrcode.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    height: 50px;
+    width: 50px;
+}
+
+.secaoDetalhesConta__itemTransacao--pix figure {
+    background-image: url("../img/pix.png");
+}
+.secaoDetalhesConta__itemTransacao--boleto figure {
+    background-image: url("../img/codigo.png");
+    width: 100%;
+    max-width: 65px;
+}
+.secaoDetalhesConta__itemTransacao--cobrar figure {
+    background-image: url("../img/cobrar-icon.png");
+    width: 100%;
+    max-width: 60px;
+}
+
+/* Efeitos Hover */
+.secaoDetalhesConta__itemTransacao--qrCode:hover figure {
+    background-image: url("../img/qrcode-verde.png");
+}
+.secaoDetalhesConta__itemTransacao--pix:hover figure {
+    background-image: url("../img/pix-verde.png");
+}
+.secaoDetalhesConta__itemTransacao--boleto:hover figure {
+    background-image: url("../img/boleto-verde.png");
+}
+.secaoDetalhesConta__itemTransacao--cobrar:hover figure {
+    background-image: url("../img/cobrar-verde.png");
+}
+
+.secaoDetalhesConta__itemTransacao figure img {
+    width: 100%;
+    max-width: 25px;
+    height: 20px;
+    opacity: 0;
+}
+
+/* Seções de Transações */
+.secaoTransacao{
+    background-color: #fff;
+    border-radius: 20px 20px 0 0;
+    border-bottom: 15px solid #f0f0f0;
+    padding: 30px 0;
+    min-height: 450px;
+}
+
+.secaoTransacao__avisoSelecao p {
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.15);
+    padding: 30px 60px;
+    width: 650px;
+    border: 1px solid rgba(0,0,0,0.15);
+    border-radius: 10px;
+    font-size: 25px;
+}
+
+.secaoTransacao__avisoSelecao img {
+    margin: 30px 0 90px;
+    width: 100%;
+}
+
+.secaoTransacao__qrcode {
+    text-align: center;
+    display: block;
+}
+
+.secaoTransacao__qrcode img {
+    max-width: 180px;
+}
+
+.secaoTransacao__qrcode p{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.secaoTransacao__qrcode button {
+    background-color: #228664;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 150px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 50px 0 20px;
+    cursor: pointer;
+}
+
+.secaoTransacao__qrcode button:hover {
+    background-color: #1f6f66;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.15) inset, 0 0 20px 4px rgba(0,0,0,0.15);
+}
+
+.secaoTransacao__qrcode a {
+    font-weight: bold;
+    color: #000;
+    font-size: 18px;
+    display: block;
+}
+
+.secaoTransacao__pix {
+    display: block;
+}
+
+.secaoTransacao__pix img {
+    width: 100%;
+    max-width: 150px;
+}
+
+.secaoTransacao__boxOpcao {
     display: flex;
     align-items: center;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+    border: 2px solid rgba(0,0,0,0.15);
+    padding: 14px 10px;
+    max-width: 500px;
+    margin: 20px 0px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.secaoTransacao__boxOpcao:hover {
+    box-shadow: none;
+}
+
+.secaoTransacao__boxOpcao img {
+    width: 100%;
+    max-width: 80px;
+}
+
+.secaoTransacao__boxOpcao p {
+    font-size: 16px;
+    margin-left: 10px;
+    line-height: 20px;
+}
+
+.secaoTransacao__boleto {}
+
+.secaoTransacao__boleto img {
+    width: 100%;
+    max-width: 80px;
+}
+
+.secaoTransacao__boleto h2 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.secaoTransacao__boleto p {
+    font-size: 18px;
+    max-width: 500px;
+    margin: 20px 0;
+}
+
+.secaoTransacao__boleto input {
+    background-color: #f4f4f4;
+    width: 100%;
+    font-size: 16px;
+    height: 50px;
+    padding: 0 80px;
+    border-radius: 10px;
+    border: 1px solid #d2d2d2;
+    color: #000;
+    box-sizing: border-box;
+}
+
+.secaoTransacao__cobrar {}
+
+.secaoTransacao__cobrar img {
+    width: 100%;
+    max-width: 80px;
+}
+
+.secaoTransacao__cobrar h2 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.secaoTransacao__cobrar p {
+    font-size: 18px;
+    max-width: 500px;
+    margin: 20px 0;
+}
+
+.secaoTransacao__cobrar .secaoTransacao__boxOpcao p {
+    margin-left: 10px;
+}
+
+/* Rodapé da Página */
+
+.rodape {
+    background-color: #fff; 
 }
 
 .rodape__menuPrincipal {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.rodape__menuItem {
+    text-align: center;
 }
 
 .rodape__menuItem a {
-    color: rgba(0,0,0,0.15)
+    color: #000;
+    text-decoration: none;
+}
+
+.rodape__menuItem a img {
+    width: 100%;
+    max-width: 30px;
+    margin-bottom: 20px;
+}
+
+.rodape__menuItem__pagar {
+    transform: translateY(-35px);   
+}
+
+.rodape__menuPrincipal .rodape__menuItem__pagar img {
+    max-width: 100px;
+}
+
+.rodape__menuPrincipal .rodape__menuItem__store img {
+    max-width: 40px;
 }

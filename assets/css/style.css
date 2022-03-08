@@ -209,7 +209,15 @@ body{
     border-radius: 20px 20px 0 0;
     border-bottom: 15px solid #f0f0f0;
     padding: 30px 0;
-    min-height: 450px;
+    min-height: 477px;
+}
+
+.secaoTransacao .container .secaoTransacaoOpcoes{
+    display: none;
+}
+
+.secaoTransacao .container .secaoTransacaoOpcoes.show {
+    display: block;
 }
 
 .secaoTransacao__avisoSelecao p {
@@ -301,8 +309,6 @@ body{
     line-height: 20px;
 }
 
-.secaoTransacao__boleto {}
-
 .secaoTransacao__boleto img {
     width: 100%;
     max-width: 80px;
@@ -330,8 +336,6 @@ body{
     color: #000;
     box-sizing: border-box;
 }
-
-.secaoTransacao__cobrar {}
 
 .secaoTransacao__cobrar img {
     width: 100%;

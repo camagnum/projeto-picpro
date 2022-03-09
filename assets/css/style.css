@@ -146,9 +146,11 @@ body{
     width: 50px;
 }
 
-.secaoDetalhesConta__itemTransacao img {
+.secaoDetalhesConta__itemTransacao figure img {
     width: 100%;
-    max-width: 40px;
+    max-width: 25px;
+    height: 20px;
+    opacity: 0;
 }
 
 .secaoDetalhesConta__itemTransacao p {
@@ -161,13 +163,7 @@ body{
 
 .secaoDetalhesConta__itemTransacao--qrCode figure {
     background-image: url("../img/qrcode.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: block;
-    height: 50px;
-    width: 50px;
 }
-
 .secaoDetalhesConta__itemTransacao--pix figure {
     background-image: url("../img/pix.png");
 }
@@ -196,12 +192,6 @@ body{
     background-image: url("../img/cobrar-verde.png");
 }
 
-.secaoDetalhesConta__itemTransacao figure img {
-    width: 100%;
-    max-width: 25px;
-    height: 20px;
-    opacity: 0;
-}
 
 /* Seções de Transações */
 .secaoTransacao{

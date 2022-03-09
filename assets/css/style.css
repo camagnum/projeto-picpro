@@ -77,18 +77,18 @@ body{
 .secaoDetalhesConta__visualizar{
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 
 .secaoDetalhesConta__visualizar img {
-    max-width: 100%;
-    width: 40px;
+    height: 17px;
+    width: 30px;
+    margin-left: 12px;
     cursor: pointer;
 }
 
 .secaoDetalhesConta__saldo .secaoDetalhesConta__visualizar strong {
     display: block;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 18px;
 }
 
